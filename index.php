@@ -1,10 +1,15 @@
 <?php
+session_start();
 require("includes.php");
 
 $site = new site();
 
-$site -> genOpening();
+$site -> genOpening("Home");
 
-echo "We're working on this, please wait!";
+$site ->genNavbar();
+?>
 
+We're working on this, please wait!
+
+<?php
 $site -> genClosing();
