@@ -13,7 +13,10 @@ END;
     }
 
     function genClosing() {
+        $year = date("y");
         print <<< END
+<div class="footer">
+Copy {$year} Wall to Wall Liquor.  Please drink responsibly.
 </BODY>
 </HTML>
 END;
