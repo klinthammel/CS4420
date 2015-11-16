@@ -6,6 +6,8 @@ $site = new site();
 
 $site -> genOpening("Home");
 
+$site -> genContent();
+
 $site ->genNavbar();
 ?>
 
