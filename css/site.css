@@ -1,0 +1,112 @@
+/*********************
+**********************
+
+	Classes
+
+**********************
+*********************/
+
+.navbar {
+	background-color: maroon;
+	color: pink;
+	margin-left: 90%;
+	position: fixed;
+	height: 200px;
+	width: 60px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.header {
+	height: auto;
+	width: auto;
+	border: double;
+	border-color: white;
+	padding: .1em;
+}
+
+.main {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid black;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.footer {
+	height: 60px;
+	width: 100%;
+	float: bottom;
+	clear: both;
+	background-color: black;
+	margin-top: 100%;
+	color: white;
+}
+
+.photo {
+	height: 100px;
+	width: 100px;
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+
+
+/*********************
+**********************
+
+	Id's
+
+**********************
+*********************/
+
+
+
+
+/*********************
+**********************
+
+	Selectors
+
+**********************
+*********************/
+
+body {
+	font-size: medium;
+	font-family: arial, courier, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color: white;
+	text-align: center;
+	background-color: black;
+}
+
+h1 {
+	font-family: sans-serif;
+	font-size: xx-large;
+	color: green;
+	text-align: left;
+}
+
+a div:link {
+	color: red;
+	text-decoration: underline;
+}
+a div:visited {
+	color: purple;
+}
+a div:hover {
+	text-decoration: none;
+	color: orange;
+}
+a div:active {
+	color: yellow;
+}
+
+
+
+
+
+
