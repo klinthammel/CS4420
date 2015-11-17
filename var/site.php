@@ -78,7 +78,7 @@ END;
 
 </div>
 <div class="footer">
-<br></br>
+<br>
 Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.
 </div>
 </BODY>
