@@ -18,7 +18,13 @@ END;
     }
 
     function contentBegin($page = NULL) {
-		if($page === "Catalog"){
+		if($page === "Home"){
+		echo <<< END
+<div class="content">
+
+END;
+		}
+		elseif($page === "Catalog"){
         echo <<< END
 <div class="content">
 <table>
