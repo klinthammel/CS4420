@@ -13,6 +13,8 @@ $site->contentBegin("Home");
 
 This will eventually be loaded from a text file.
 It will be a short description of what we are.
+It will also have larger navigation and search functionality to quickly look for something.
+It will also have popular items shown.
 <br />
 <br />
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /><br />

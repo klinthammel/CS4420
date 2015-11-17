@@ -71,7 +71,7 @@ END;
         print <<< END
 
 <ul class="navbar">
-    <li><a href="index.php"><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></a></li>
+    <li><a href="index.php"><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/>Home</a></li>
 	<li><a href="catalog.php?category=catalog">Catalog</a></li>
 	<li><a href="shop.php?category=beer">Beers</a></li>
 	<li><a href="shop.php?category=liquor">Liquors</a></li>
