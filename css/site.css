@@ -99,10 +99,11 @@ body {
 }
 
 h1 {
-	font-family: sans-serif;
+	font-family: arial, courier, sans-serif;
 	font-size: xx-large;
-	color: green;
+	color: blue;
 	text-align: left;
+	text-shadow: 2px 2px grey;
 }
 
 a:link {

@@ -18,14 +18,12 @@ END;
     }
 
     function contentBegin($page = NULL) {
-		if($page === "Home"){
 		echo <<< END
-<div class="content">
-
+<h1>{$page}</h1>
 END;
-		}
-		elseif($page === "Catalog"){
-        echo <<< END
+	
+	if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine")){
+			echo <<< END
 <div class="content">
 <table>
 	<tr>
@@ -35,17 +33,39 @@ END;
 		<td>Quantity</td>
 	</tr>
 END;
-		//for loop filling in table from db
-		echo <<< END
-</table>
-			
-END;
 		}
 		else {
-		echo <<< END
+			echo <<< END
 <div class="content">
+
 END;
 		}
+		
+		switch ($page) {
+			case "Home":
+
+				break;
+			case "Catalog":
+			//for loop filling in table from db			
+				break;
+			case "Beer":
+			//for loop filling in table from db			
+				break;
+			case "Liquor":
+			//for loop filling in table from db			
+				break;
+			case "Wine":
+			//for loop filling in table from db
+				break;
+			default:
+		}
+		
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine")){
+			echo <<< END
+</table>
+END;
+		}
+		
     }
 
     function contentEnd() {
@@ -80,9 +100,9 @@ END;
     <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="catalog.php?category=catalog">Catalog</a></li>
-	<li><a href="shop.php?category=beer">Beers</a></li>
-	<li><a href="shop.php?category=liquor">Liquors</a></li>
-    <li><a href="shop.php?category=wine">Wines</a></li>
+	<li><a href="beer.php?category=beer">Beers</a></li>
+	<li><a href="liquor.php?category=liquor">Liquors</a></li>
+    <li><a href="wine.php?category=wine">Wines</a></li>
     <li class="right"><a href="cart.php">Cart</a></li>
     {$user}
 </ul>
