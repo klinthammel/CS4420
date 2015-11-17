@@ -17,8 +17,29 @@ Wall to Wall Liquor
 END;
     }
 
-    function contentBegin() {
-        print "<div class=\"content\">";
+    function contentBegin($page = NULL) {
+		if($page === "Catalog"){
+        echo <<< END
+<div class="content">
+<table>
+	<tr>
+		<td>Product</td>
+		<td>Category</td>
+		<td>Wholesale</td>
+		<td>Quantity</td>
+	</tr>
+END;
+		//for loop filling in table from db
+		echo <<< END
+</table>
+			
+END;
+		}
+		else {
+		echo <<< END
+<div class="content">
+END;
+		}
     }
 
     function contentEnd() {
@@ -31,6 +52,7 @@ END;
 
 </div>
 <div class="footer">
+<br></br>
 Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.
 </div>
 </BODY>
@@ -50,10 +72,11 @@ END;
 
 <ul class="navbar">
     <li><a href="index.php"><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></a></li>
+	<li><a href="catalog.php?category=catalog">Catalog</a></li>
+	<li><a href="shop.php?category=beer">Beers</a></li>
+	<li><a href="shop.php?category=liquor">Liquors</a></li>
     <li><a href="shop.php?category=wine">Wines</a></li>
-    <li><a href="shop.php?category=beer">Beers</a></li>
-    <li><a href="shop.php?category=liquor">Liquors</a></li>
-    <li class="right"><a href="cart.php">Shop</a></li>
+    <li class="right"><a href="cart.php">Cart</a></li>
     {$user}
 </ul>
 
