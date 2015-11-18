@@ -12,7 +12,7 @@
 	margin-left: 91%;
 	position: fixed;
 	float: right;
-	height: 200px;
+	height: 220px;
 	width: 7%;
 	padding: 5px;
 	border-radius: 5px;
@@ -32,7 +32,8 @@
 }
 
 .content {
-	float:left;
+	float: left;
+	height: auto;
 	margin-left: auto;
 	margin-right: 9%;
 	border: 2px solid white;
@@ -75,6 +76,20 @@
     height: 110%;
     width: 110%;
 	border-bottom: 1px solid black;
+}
+
+#search {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 55%;
+	border: none;
+}
+
+#searchData {
+	text-align: left;
+	border: none;
+	color: red;
 }
 
 

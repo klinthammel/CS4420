@@ -18,11 +18,14 @@ END;
     }
 
     function contentBegin($page = NULL) {
+		if($page === "Search"){
+			$page = "Results";
+		}
 		echo <<< END
 <h1>{$page}</h1>
 END;
 	
-	if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine")){
+	if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search")){
 			echo <<< END
 <div class="content">
 <table>
@@ -37,6 +40,34 @@ END;
 		else {
 			echo <<< END
 <div class="content">
+<div class="search">
+<br>
+<table id="search">
+	<tr>
+		<td id="searchData">
+			<form action="search.php" method="get">
+			Product:
+				<input type="text" name="product"><br>
+		</td>
+		<td id="searchData">
+			Category:
+			<input type="radio" name="Category" value="All" checked="checked">All    
+			<input type="radio" name="Category" value="Beer">Beer   
+			<input type="radio" name="Category" value="Liquor">Liquor  
+			<input type="radio" name="Category" value="Wine">Wine  
+
+		</td>
+		<td id="searchData">
+			<input type="submit" value="Search">
+			</form>
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+</div>
+	
+	
 
 END;
 		}
@@ -60,7 +91,7 @@ END;
 			default:
 		}
 		
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine")){
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search")){
 			echo <<< END
 </table>
 END;
@@ -104,6 +135,7 @@ END;
 	<li><a href="liquor.php?category=liquor">Liquors</a></li>
     <li><a href="wine.php?category=wine">Wines</a></li>
     <li class="right"><a href="cart.php">Cart</a></li>
+	<li class="right"><a href="search.php">Search</a></li>
     {$user}
 </ul>
 
