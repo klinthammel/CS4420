@@ -51,11 +51,18 @@ END;
 		</td>
 		<td id="searchData">
 			Category:
-			<input type="radio" name="Category" value="All" checked="checked">All    
-			<input type="radio" name="Category" value="Beer">Beer   
-			<input type="radio" name="Category" value="Liquor">Liquor  
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="All" checked="checked">All
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Beer">Beer
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Liquor">Liquor 
+		</td>
+		<td id="searchData">
 			<input type="radio" name="Category" value="Wine">Wine  
-
 		</td>
 		<td id="searchData">
 			<input type="submit" value="Search">
