@@ -137,10 +137,10 @@ END;
 <ul class="navbar">
     <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
-	<li><a href="catalog.php?category=catalog">Catalog</a></li>
-	<li><a href="beer.php?category=beer">Beers</a></li>
-	<li><a href="liquor.php?category=liquor">Liquors</a></li>
-    <li><a href="wine.php?category=wine">Wines</a></li>
+	<li><a href="catalog.php">Catalog</a></li>
+	<li><a href="catalog.php?category=beer">Beers</a></li>
+	<li><a href="catalog.php?category=liquor">Liquors</a></li>
+    <li><a href="catalog.php?category=wine">Wines</a></li>
     <li class="right"><a href="cart.php">Cart</a></li>
 	<li class="right"><a href="search.php">Search</a></li>
     {$user}
