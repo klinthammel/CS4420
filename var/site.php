@@ -21,10 +21,51 @@ END;
 		echo <<< END
 <h1>{$page}</h1>
 END;
-	
+
 	if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search")){
 			echo <<< END
 <div class="content">
+END;
+
+		if ($page === "Search") {
+			echo <<< END
+<div class="search">
+<br>
+<table id="search">
+	<tr>
+		<td id="searchData">
+			<form action="search.php" method="get">
+			Product:
+				<input type="text" name="product"><br>
+		</td>
+		<td id="searchData">
+			Category:
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Catalog" checked="checked">All
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Beer">Beer
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Liquor">Liquor 
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Wine">Wine  
+		</td>
+		<td id="searchData">
+			<input type="submit" value="Search">
+			</form>
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+</div>
+	
+END;
+		}
+	echo <<< END
 <table>
 	<tr>
 		<td>Product</td>
@@ -134,7 +175,7 @@ END;
 <ul class="navbar">
     <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
-	<li><a href="catalog.php">Catalog</a></li>
+	<li><a href="catalog.php?category=catalog">Catalog</a></li>
 	<li><a href="catalog.php?category=beer">Beers</a></li>
 	<li><a href="catalog.php?category=liquor">Liquors</a></li>
     <li><a href="catalog.php?category=wine">Wines</a></li>
