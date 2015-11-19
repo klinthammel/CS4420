@@ -19,7 +19,7 @@ Wall to Wall Liquor
 <noscript>
 
     <style type="text/css">
-        .button {display:none;}
+        .nj {display:none;}
     </style>
     <div class="noscriptmsg">
 		JavaScript must be enabled!
@@ -54,7 +54,7 @@ END;
 		<td>Category</td>
 		<td>Wholesale</td>
 		<td>Quantity</td>
-		<td>Add to Cart</td>
+		<td class="nj">Add to Cart</td>
 	</tr>
 END;
 		}
