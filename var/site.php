@@ -21,101 +21,32 @@ END;
     function contentBegin($page = NULL) {	
 		echo <<< END
 <h1>{$page}</h1>
-END;
 
-	if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search")){
-			echo <<< END
 <div class="content">
+
 END;
 
-		if(($page === "Search") || ($page === "Catalog")) {
-			echo <<< END
-<div class="search">
-<br>
-<table id="search">
-	<tr>
-		<td id="searchData">
-			<form action="search.php" method="get">
-			Product:
-				<input type="text" name="product"><br>
-		</td>
-		<td id="searchData">
-			Category:
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Catalog" checked="checked">All
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Beer">Beer
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Liquor">Liquor 
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Wine">Wine  
-		</td>
-		<td id="searchData">
-			<input type="submit" value="Search">
-			</form>
-		</td>
-	</tr>
-</table>
-<br>
-<br>
-</div>
-	
-END;
-		}
-	echo <<< END
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non-Alcoholic")){
+
+
+			if(($page === "Search") || ($page === "Catalog")) {
+				$this ->genSearch();
+			}
+		
+		echo <<< END
+		
 <table>
 	<tr>
 		<td>Product</td>
 		<td>Category</td>
 		<td>Wholesale</td>
 		<td>Quantity</td>
+		<td>Add to Cart</td>
 	</tr>
 END;
 		}
 		else {
-			echo <<< END
-<div class="content">
-<div class="search">
-<br>
-<table id="search">
-	<tr>
-		<td id="searchData">
-			<form action="search.php" method="get">
-			Product:
-				<input type="text" name="product"><br>
-		</td>
-		<td id="searchData">
-			Category:
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Catalog" checked="checked">All
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Beer">Beer
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Liquor">Liquor 
-		</td>
-		<td id="searchData">
-			<input type="radio" name="Category" value="Wine">Wine  
-		</td>
-		<td id="searchData">
-			<input type="submit" value="Search">
-			</form>
-		</td>
-	</tr>
-</table>
-<br>
-<br>
-</div>
-	
-	
-
-END;
+			$this ->genSearch();
 		}
 		
 		switch ($page) {
@@ -137,12 +68,12 @@ END;
 			default:
 		}
 		
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search")){
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non-Alcoholic")){
 			echo <<< END
+			
 </table>
 END;
-		}
-		
+		}	
     }
 
     function contentEnd() {
@@ -153,7 +84,6 @@ END;
         $year = date("Y");
         print <<< END
 
-</div>
 <div class="footer">
 <br>
 Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.
@@ -161,7 +91,6 @@ Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.
 </BODY>
 </HTML>
 END;
-
     }
 
     function genNavbar() {
@@ -180,12 +109,51 @@ END;
 	<li><a href="catalog.php?category=Beer">Beers</a></li>
 	<li><a href="catalog.php?category=Liquor">Liquors</a></li>
     <li><a href="catalog.php?category=Wine">Wines</a></li>
+	<li><a href="catalog.php?category=Non-Alcoholic">Non-Alcoholic</a></li>
     <li class="right"><a href="Cart.php">Cart</a></li>
 	<li class="right"><a href="Search.php">Search</a></li>
     {$user}
 </ul>
 
 END;
-
     }
+	
+	function genSearch(){
+		echo <<< END
+<div class="search">
+<br>
+<table id="search">
+	<tr>
+		<td id="searchData">
+			<form action="search.php" method="get">
+			Product:
+				<input type="text" name="product"><br>
+		</td>
+		<td id="searchData">
+			Category:
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Catalog" checked="checked">All
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Beer">Beer
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Liquor">Liquor 
+		</td>
+		<td id="searchData">
+			<input type="radio" name="Category" value="Wine">Wine  
+		</td>
+		<td id="searchData">
+			<input type="submit" value="Search">
+			</form>
+		</td>
+	</tr>
+</table>
+<br>
+<br>
+</div>
+	
+END;
+	}
 }

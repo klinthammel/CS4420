@@ -1,103 +1,6 @@
 /*********************
 **********************
 
-	Classes
-
-**********************
-*********************/
-
-.navbar {
-	background-color: maroon;
-	color: blue;
-	margin-left: 91%;
-	position: fixed;
-	float: right;
-	height: 220px;
-	width: 7%;
-	padding: 5px;
-	border-radius: 5px;
-	font-size: large;
-}
-
-.header {
-	height: 10%;
-	width: auto;
-	padding-bottom: 2%;
-	padding-left: 1%;
-	border-bottom: double;
-	border-color: white;
-	color: white;
-	font-size: xx-large;
-	text-shadow: 2px 2px 10px #FF0000;
-}
-
-.content {
-	float: left;
-	margin-left: auto;
-	margin-right: 9%;
-	border: 2px solid white;
-	width: 90%;
-	word-wrap: break-word;
-	color: white;
-	clear: right;
-}
-
-.footer {
-	height: 50px;
-	width: 100%;
-	background-color: maroon;
-	bottom: 0;
-	clear:both;
-	position: fixed;
-	color: white;
-}
-
-.photo {
-	height: 100px;
-	width: 100px;
-	margin-left:auto;
-	margin-right:auto;
-
-}
-
-
-
-/*********************
-**********************
-
-	Id's
-
-**********************
-*********************/
-
-#logo {
-	margin-left: -5%;
-    height: 110%;
-    width: 110%;
-	border-bottom: 1px solid black;
-}
-
-#search {
-	margin-left: auto;
-	margin-right: auto;
-	text-align: left;
-	width: 55%;
-	border: none;
-}
-
-#searchData {
-	text-align: left;
-	border: none;
-	color: red;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-
-
-/*********************
-**********************
-
 	Selectors
 
 **********************
@@ -155,4 +58,98 @@ table {
 td {
 	border: 3px solid navy;
 	color: red;
+}
+
+/*********************
+**********************
+
+	Id's
+
+**********************
+*********************/
+
+#logo {
+	margin-left: -5%;
+    height: 110%;
+    width: 110%;
+	border-bottom: 1px solid black;
+}
+
+#search {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+	width: 55%;
+	border: none;
+}
+
+#searchData {
+	text-align: left;
+	border: none;
+	color: red;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*********************
+**********************
+
+	Classes
+
+**********************
+*********************/
+
+.navbar {
+	background-color: maroon;
+	color: blue;
+	margin-left: 91%;
+	position: fixed;
+	float: right;
+	height: 260px;
+	width: 7%;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: large;
+}
+
+.header {
+	height: 10%;
+	width: auto;
+	padding-bottom: 2%;
+	padding-left: 1%;
+	border-bottom: double;
+	border-color: white;
+	color: white;
+	font-size: xx-large;
+	text-shadow: 2px 2px 10px #FF0000;
+}
+
+.content {
+	float: left;
+	margin-left: auto;
+	margin-right: 9%;
+	border: 2px solid white;
+	width: 90%;
+	word-wrap: break-word;
+	color: white;
+	clear: right;
+}
+
+.footer {
+	height: 50px;
+	width: 100%;
+	background-color: maroon;
+	bottom: 0;
+	clear:both;
+	position: fixed;
+	color: white;
+}
+
+.photo {
+	height: 100px;
+	width: 100px;
+	margin-left:auto;
+	margin-right:auto;
+
 }
