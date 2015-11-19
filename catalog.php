@@ -11,7 +11,7 @@ else {
 
 $site = new site();
 
-$site -> genOpening("Catalog");
+$site -> genOpening(ucfirst($type));
 
 $site->genNavbar();
 

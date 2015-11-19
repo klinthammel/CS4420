@@ -17,10 +17,7 @@ Wall to Wall Liquor
 END;
     }
 
-    function contentBegin($page = NULL) {
-		if($page === "Search"){
-			$page = "Results";
-		}
+    function contentBegin($page = NULL) {	
 		echo <<< END
 <h1>{$page}</h1>
 END;
