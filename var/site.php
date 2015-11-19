@@ -161,6 +161,9 @@ END;
 			<input type="radio" name="Category" value="Wine">Wine  
 		</td>
 		<td id="searchData">
+			<input type="radio" name="Category" value="Non-Alcoholic">Non-Alcoholic  
+		</td>
+		<td id="searchData">
 			<input type="submit" value="Search">
 			</form>
 		</td>
