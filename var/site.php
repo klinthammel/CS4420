@@ -50,7 +50,7 @@ END;
 			Category:
 		</td>
 		<td id="searchData">
-			<input type="radio" name="Category" value="All" checked="checked">All
+			<input type="radio" name="Category" value="Catalog" checked="checked">All
 		</td>
 		<td id="searchData">
 			<input type="radio" name="Category" value="Beer">Beer
