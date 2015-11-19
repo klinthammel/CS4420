@@ -60,6 +60,7 @@ td {
 	color: red;
 }
 
+
 /*********************
 **********************
 
@@ -152,4 +153,10 @@ td {
 	margin-left:auto;
 	margin-right:auto;
 
+}
+
+.noscriptmsg {
+	color: black;
+	font-size: xx-large;
+	background-color: yellow;
 }

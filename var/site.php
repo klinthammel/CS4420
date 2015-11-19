@@ -15,11 +15,24 @@ class site {
 <div class="header">
 Wall to Wall Liquor
 </div>
+
+<noscript>
+
+    <style type="text/css">
+        .button, .search {display:none;}
+    </style>
+    <div class="noscriptmsg">
+		JavaScript must be enabled!
+    </div>
+
+</noscript>
+
 END;
     }
 
     function contentBegin($page = NULL) {	
 		echo <<< END
+
 <h1>{$page}</h1>
 
 <div class="content">
@@ -54,16 +67,19 @@ END;
 
 				break;
 			case "Catalog":
-			//for loop filling in table from db			
+				//for loop filling in table from db			
 				break;
 			case "Beer":
-			//for loop filling in table from db			
+				//for loop filling in table from db			
 				break;
 			case "Liquor":
-			//for loop filling in table from db			
+				//for loop filling in table from db			
 				break;
 			case "Wine":
-			//for loop filling in table from db
+				//for loop filling in table from db
+				break;
+			case "Non-Alcoholic":
+				//for loop filling in table from db
 				break;
 			default:
 		}
@@ -145,7 +161,7 @@ END;
 			<input type="radio" name="Category" value="Wine">Wine  
 		</td>
 		<td id="searchData">
-			<input type="submit" value="Search">
+			<input type="submit" value="Search" class="button">
 			</form>
 		</td>
 	</tr>
