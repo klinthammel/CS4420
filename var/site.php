@@ -8,6 +8,7 @@ class site {
 <HEAD>
 <TITLE>{$title} - Wall to Wall Liquor</TITLE>
 <link rel="stylesheet" href="css/site.css" />
+<link rel="ICON" href="images/logo.ico" type="image/ico" />
 </HEAD>
 <BODY>
 
