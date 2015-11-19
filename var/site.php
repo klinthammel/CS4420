@@ -19,7 +19,7 @@ Wall to Wall Liquor
 <noscript>
 
     <style type="text/css">
-        .button, .search {display:none;}
+        .button {display:none;}
     </style>
     <div class="noscriptmsg">
 		JavaScript must be enabled!
@@ -161,7 +161,7 @@ END;
 			<input type="radio" name="Category" value="Wine">Wine  
 		</td>
 		<td id="searchData">
-			<input type="submit" value="Search" class="button">
+			<input type="submit" value="Search">
 			</form>
 		</td>
 	</tr>
