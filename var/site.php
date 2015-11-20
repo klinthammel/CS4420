@@ -39,7 +39,7 @@ END;
 
 END;
 
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non-Alcoholic")){
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non_Alcoholic")){
 
 
 			if(($page === "Search") || ($page === "Catalog")) {
@@ -78,13 +78,13 @@ END;
 			case "Wine":
 				//for loop filling in table from db
 				break;
-			case "Non-Alcoholic":
+			case "Non_Alcoholic":
 				//for loop filling in table from db
 				break;
 			default:
 		}
 		
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non-Alcoholic")){
+		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non_Alcoholic")){
 			echo <<< END
 			
 </table>
@@ -125,7 +125,7 @@ END;
 	<li><a href="catalog.php?category=Beer">Beers</a></li>
 	<li><a href="catalog.php?category=Liquor">Liquors</a></li>
     <li><a href="catalog.php?category=Wine">Wines</a></li>
-	<li><a href="catalog.php?category=Non-Alcoholic">Non-Alcoholic</a></li>
+	<li><a href="catalog.php?category=Non_Alcoholic">Non-Alcoholic</a></li>
     <li class="right"><a href="Cart.php">Cart</a></li>
 	<li class="right"><a href="Search.php">Search</a></li>
     {$user}
@@ -161,7 +161,7 @@ END;
 			<input type="radio" name="Category" value="Wine">Wine  
 		</td>
 		<td id="searchData">
-			<input type="radio" name="Category" value="Non-Alcoholic">Non-Alcoholic  
+			<input type="radio" name="Category" value="Non_Alcoholic">Non-Alcoholic  
 		</td>
 		<td id="searchData">
 			<input type="submit" value="Search">
