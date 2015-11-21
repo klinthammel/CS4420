@@ -64,7 +64,7 @@ END;
 		
 		switch ($page) {
 			case "Home":
-
+				$this ->genHomeContent();
 				break;
 			case "Catalog":
 				//for loop filling in table from db			
@@ -132,7 +132,8 @@ END;
 </ul>
 
 END;
-    }
+	}
+    
 	
 	function genSearch(){
 		echo <<< END
@@ -174,5 +175,125 @@ END;
 </div>
 	
 END;
+	}
+	
+	function genHomeContent(){
+			echo <<< END
+			
+<h2>Welcome</h2>
+<br>
+			
+END;
+		$fh = fopen('info\welcome.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+
+<br>
+<br>
+<hr>
+<br>
+<h2>Catalog</h2>
+<br>
+
+END;
+		$fh = fopen('info\catalog.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+
+<br>
+<br>
+<hr>
+<br>
+<h2>Beer</h2>
+<br>
+
+END;
+		$fh = fopen('info\beer.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+		
+<br>
+<br>
+<hr>
+<br>
+<h2>Liquors</h2>
+<br>
+
+END;
+		$fh = fopen('info\liquor.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+		
+<br>
+<br>
+<hr>
+<br>
+<h2>Wine</h2>
+<br>
+
+END;
+		$fh = fopen('info\wine.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+
+<br>
+<br>
+<hr>
+<br>
+<h2>Non-Alcoholic</h2>
+<br>
+
+END;
+		$fh = fopen('info\non_alcoholic.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+
+<br>
+<br>
+<hr>
+<br>
+<h2>Mixers</h2>
+<br>
+
+END;
+		
+		$fh = fopen('info\mixers.txt','r');
+		while ($line = fgets($fh)) {
+			echo($line);
+		}
+		fclose($fh);
+		
+		echo <<< END
+	
+<br>
+<br>
+</div>
+
+END;
+
 	}
 }

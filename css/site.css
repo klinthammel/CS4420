@@ -6,7 +6,7 @@
 **********************
 *********************/
 
-html, body {
+html, body, pre {
 	font-size: medium;
 	font-family: arial, courier, sans-serif;
 	font-weight: normal;
@@ -24,6 +24,17 @@ h1 {
 	color: blue;
 	text-align: left;
 	text-shadow: 2px 2px grey;
+}
+h2 {
+	font-family: arial, courier, sans-serif;
+	font-size: x-large;
+	color: red;
+	text-decoration: underline;
+}
+
+hr {
+	border-style: dashed;
+	color: grey;
 }
 
 .navbar a:link {

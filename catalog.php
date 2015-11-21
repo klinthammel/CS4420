@@ -16,9 +16,9 @@ $site -> genOpening(ucfirst($type));
 $site->genNavbar();
 
 $site->contentBegin(ucfirst($type));
-?>
 
-<?php
 $site->contentEnd();
 
 $site -> genClosing();
+
+?>
