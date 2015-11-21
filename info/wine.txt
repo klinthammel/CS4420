@@ -1,3 +1,5 @@
+<h2>Wine</h2>
+
 <pre>
 Wine (from Latin vinum) is an alcoholic beverage made from fermented grapes or other fruits. Due to the natural chemical balance, grapes ferment without the addition of sugars, acids, enzymes, water, or other nutrients.[1] Yeast consumes the sugar in the grapes and converts it to ethanol and carbon dioxide. Different varieties of grapes and strains of yeasts produce different styles of wine. The well-known variations result from the very complex interactions between the biochemical development of the fruit, reactions involved in fermentation, the terroir (the special characteristics imparted by geography, geology, climate and plant genetics) and subsequent appellation (the legally defined and protected geographical indication used to identify where the grapes for a wine were grown), along with human intervention in the overall process.
 
@@ -7,6 +9,5 @@ Wines made from produce besides grapes include rice wine and innumerable fruit w
 
 Wine has long played an important role in religion. Red wine was associated with blood by the ancient Egyptians[12] and was used by both the Greek cult of Dionysus and the Romans in their Bacchanalia; Judaism also incorporates it in the Kiddush and Christianity in the Eucharist.
 </pre>
-<br>
 
 Source: <a href="https://en.wikipedia.org/wiki/Wine" target="_blank">Wine</a>
