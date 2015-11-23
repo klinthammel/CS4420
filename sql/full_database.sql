@@ -1,0 +1,476 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.14
+-- http://www.phpmyadmin.net
+--
+-- Host: 127.0.0.1
+-- Generation Time: Nov 24, 2015 at 12:25 AM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cs4420`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cart`
+--
+-- Creation: Nov 23, 2015 at 11:18 PM
+--
+
+DROP TABLE IF EXISTS `cart`;
+CREATE TABLE IF NOT EXISTS `cart` (
+  `ID` int(11) NOT NULL,
+  `Barcode` int(11) NOT NULL,
+  `Product` varchar(255) NOT NULL,
+  `Price` int(11) NOT NULL,
+  `Quantity` int(11) NOT NULL,
+  `TotalCost` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Cart datatable';
+
+--
+-- Truncate table before insert `cart`
+--
+
+TRUNCATE TABLE `cart`;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `description_alcohol`
+--
+-- Creation: Nov 23, 2015 at 10:59 PM
+--
+
+DROP TABLE IF EXISTS `description_alcohol`;
+CREATE TABLE IF NOT EXISTS `description_alcohol` (
+  `Barcode` int(11) NOT NULL,
+  `Category` varchar(255) NOT NULL,
+  `Sub_category` varchar(255) NOT NULL,
+  `Rating` int(11) NOT NULL,
+  `RateCount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='This table will hold the description of the alcoholic drinks on the list.';
+
+--
+-- Truncate table before insert `description_alcohol`
+--
+
+TRUNCATE TABLE `description_alcohol`;
+--
+-- Dumping data for table `description_alcohol`
+--
+
+INSERT INTO `description_alcohol` (`Barcode`, `Category`, `Sub_category`, `Rating`, `RateCount`) VALUES
+(2123450, 'Absinthe', 'N/A', 0, 0),
+(2123451, 'Brandy', 'N/A', 0, 0),
+(2123452, 'Brandy', 'N/A', 0, 0),
+(2123453, 'Brandy', 'N/A', 0, 0),
+(2123454, 'Brandy', 'N/A', 0, 0),
+(2123455, 'Brandy', 'N/A', 0, 0),
+(2123456, 'Brandy', 'N/A', 0, 0),
+(2123457, 'Brandy', 'N/A', 0, 0),
+(2123458, 'Brandy', 'N/A', 0, 0),
+(2123459, 'Brandy', 'N/A', 0, 0),
+(2123460, 'Cognac', 'N/A', 0, 0),
+(2123461, 'Cognac', 'N/A', 0, 0),
+(2123462, 'Everclear', 'N/A', 0, 0),
+(2123463, 'Gin', 'N/A', 0, 0),
+(2123464, 'Gin', 'N/A', 0, 0),
+(2123465, 'Gin', 'N/A', 0, 0),
+(2123466, 'Gin', 'N/A', 0, 0),
+(2123467, 'Liquer', 'N/A', 0, 0),
+(2123468, 'Liquer', 'N/A', 0, 0),
+(2123469, 'Liquer', 'N/A', 0, 0),
+(2123470, 'Liquer', 'N/A', 0, 0),
+(2123471, 'Liquer', 'N/A', 0, 0),
+(2123472, 'Liquer', 'N/A', 0, 0),
+(2123473, 'Liquer', 'N/A', 0, 0),
+(2123474, 'Liquer', 'N/A', 0, 0),
+(2123475, 'Liquer', 'N/A', 0, 0),
+(2123476, 'Liquer', 'N/A', 0, 0),
+(2123477, 'Liquer', 'N/A', 0, 0),
+(2123478, 'Liquer', 'N/A', 0, 0),
+(2123479, 'Liquer', 'N/A', 0, 0),
+(2123480, 'Liquer', 'N/A', 0, 0),
+(2123481, 'Liquer', 'N/A', 0, 0),
+(2123482, 'Rum', 'N/A', 0, 0),
+(2123483, 'Rum', 'N/A', 0, 0),
+(2123484, 'Rum', 'N/A', 0, 0),
+(2123485, 'Rum', 'N/A', 0, 0),
+(2123486, 'Rum', 'N/A', 0, 0),
+(2123487, 'Sake', 'N/A', 0, 0),
+(2123488, 'Schnapps', 'N/A', 0, 0),
+(2123489, 'Schnapps', 'N/A', 0, 0),
+(2123490, 'Schnapps', 'N/A', 0, 0),
+(2123491, 'Schnapps', 'N/A', 0, 0),
+(2123492, 'Schnapps', 'N/A', 0, 0),
+(2123493, 'Schnapps', 'N/A', 0, 0),
+(2123494, 'Schnapps', 'N/A', 0, 0),
+(2123495, 'Schnapps', 'N/A', 0, 0),
+(2123496, 'Tequila', 'N/A', 0, 0),
+(2123497, 'Tequila', 'N/A', 0, 0),
+(2123498, 'Tequila', 'N/A', 0, 0),
+(2123499, 'Vermouth', 'N/A', 0, 0),
+(2123500, 'Vodka', 'N/A', 0, 0),
+(2123501, 'Vodka', 'N/A', 0, 0),
+(2123502, 'Vodka', 'N/A', 0, 0),
+(2123503, 'Vodka', 'N/A', 0, 0),
+(2123504, 'Whiskey', 'N/A', 0, 0),
+(2123505, 'Whiskey', 'N/A', 0, 0),
+(2123506, 'Whiskey', 'Bourbon', 0, 0),
+(2123507, 'Whiskey', 'Scotch', 0, 0),
+(2123508, 'Whiskey', 'Irish', 0, 0),
+(2123509, 'Whiskey', 'Canadian', 0, 0),
+(2123510, 'Whiskey', 'Scotch', 0, 0),
+(2123511, 'Wine', 'Fortified', 0, 0),
+(2123512, 'Wine', 'Fortified', 0, 0),
+(2123513, 'Wine', 'Fortified', 0, 0),
+(2123514, 'Wine', 'Fortified', 0, 0),
+(2123515, 'Wine', 'Red', 0, 0),
+(2123516, 'Wine', 'Red', 0, 0),
+(2123517, 'Wine', 'Sparkling', 0, 0),
+(2123518, 'Wine', 'Sparkling', 0, 0),
+(2123519, 'Wine', 'Sparkling', 0, 0),
+(2123520, 'Wine', 'White', 0, 0),
+(2123521, 'Wine', 'White', 0, 0),
+(2123522, 'Wine', 'White', 0, 0),
+(2123523, 'Beer', 'Bottled Domestic', 0, 0),
+(2123524, 'Beer', 'Bottled Domestic', 0, 0),
+(2123525, 'Beer', 'Bottled Domestic', 0, 0),
+(2123526, 'Beer', 'Bottled Domestic', 0, 0),
+(2123527, 'Beer', 'Bottled Domestic', 0, 0),
+(2123528, 'Beer', 'Bottled Domestic', 0, 0),
+(2123529, 'Beer', 'Bottled Domestic', 0, 0),
+(2123530, 'Beer', 'Bottled Domestic', 0, 0),
+(2123531, 'Beer', 'Bottled Other', 0, 0),
+(2123532, 'Beer', 'Bottled Other', 0, 0),
+(2123533, 'Beer', 'Bottled Other', 0, 0),
+(2123534, 'Beer', 'Bottled Other', 0, 0),
+(2123535, 'Beer', 'Bottled Other', 0, 0),
+(2123536, 'Beer', 'Bottled Other', 0, 0),
+(2123537, 'Beer', 'Bottled Other', 0, 0),
+(2123538, 'Beer', 'Bottled Other', 0, 0),
+(2123539, 'Beer', 'Bottled Other', 0, 0),
+(2123540, 'Beer', 'Mexican', 0, 0),
+(2123541, 'Beer', 'Mexican', 0, 0),
+(2123542, 'Beer', 'Mexican', 0, 0),
+(2123543, 'Beer', 'Mexican', 0, 0),
+(2123544, 'Beer', 'Mexican', 0, 0),
+(2123545, 'Beer', 'Can', 0, 0),
+(2123546, 'Beer', 'Can', 0, 0),
+(2123547, 'Beer', 'Bottled Domestic', 0, 0),
+(2123548, 'Beer', 'Bottled Domestic', 0, 0),
+(2123549, 'Beer', 'Bottled Domestic', 0, 0),
+(2123550, 'Beer', 'Bottled Domestic', 0, 0),
+(2123551, 'Beer', 'Can', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `description_non`
+--
+-- Creation: Nov 23, 2015 at 11:15 PM
+--
+
+DROP TABLE IF EXISTS `description_non`;
+CREATE TABLE IF NOT EXISTS `description_non` (
+  `Barcode` int(11) NOT NULL,
+  `Category` varchar(255) NOT NULL,
+  `Sub_category` varchar(255) NOT NULL,
+  `Rating` int(11) NOT NULL,
+  `RateCount` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Description of non_alcoholic beverages/condiments.';
+
+--
+-- Truncate table before insert `description_non`
+--
+
+TRUNCATE TABLE `description_non`;
+--
+-- Dumping data for table `description_non`
+--
+
+INSERT INTO `description_non` (`Barcode`, `Category`, `Sub_category`, `Rating`, `RateCount`) VALUES
+(2123552, 'Soda', 'N/A', 0, 0),
+(2123553, 'Soda', 'N/A', 0, 0),
+(2123554, 'Soda', 'N/A', 0, 0),
+(2123555, 'Soda', 'N/A', 0, 0),
+(2123556, 'Juice', 'N/A', 0, 0),
+(2123557, 'Juice', 'N/A', 0, 0),
+(2123558, 'Juice', 'N/A', 0, 0),
+(2123559, 'Juice', 'N/A', 0, 0),
+(2123560, 'Juice', 'N/A', 0, 0),
+(2123561, 'Juice', 'N/A', 0, 0),
+(2123562, 'Tonic ', 'N/A', 0, 0),
+(2123563, 'Non-Alcoholic Wine', 'N/A', 0, 0),
+(2123564, 'Non-Alcoholic Beer', 'N/A', 0, 0),
+(2123565, 'Tea', 'N/A', 0, 0),
+(2123566, 'Coffee', 'N/A', 0, 0),
+(2123567, 'Food', 'N/A', 0, 0),
+(2123568, 'Food', 'N/A', 0, 0),
+(2123569, 'Food', 'N/A', 0, 0),
+(2123570, 'Food', 'N/A', 0, 0),
+(2123571, 'Food', 'N/A', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `items_alcohol`
+--
+-- Creation: Nov 23, 2015 at 11:05 PM
+--
+
+DROP TABLE IF EXISTS `items_alcohol`;
+CREATE TABLE IF NOT EXISTS `items_alcohol` (
+  `Barcode` int(11) NOT NULL,
+  `Product` varchar(255) NOT NULL,
+  `Price` int(11) NOT NULL,
+  `Stock` int(11) NOT NULL,
+  `Package` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains the names, stock, and price details of items.';
+
+--
+-- Truncate table before insert `items_alcohol`
+--
+
+TRUNCATE TABLE `items_alcohol`;
+--
+-- Dumping data for table `items_alcohol`
+--
+
+INSERT INTO `items_alcohol` (`Barcode`, `Product`, `Price`, `Stock`, `Package`) VALUES
+(2123450, 'Absinthe', 6, 5, 'Bottles'),
+(2123451, 'Apple Brandy', 4, 11, 'Bottles'),
+(2123452, 'Applejack', 12, 4, 'Bottles'),
+(2123453, 'Apricot Brandy', 3, 3, 'Bottles'),
+(2123454, 'Armagnac', 5, 4, 'Bottles'),
+(2123455, 'Calvados', 4, 9, 'Bottles'),
+(2123456, 'Cherry Brandy', 11, 1, 'Bottles'),
+(2123457, 'Ginger Brandy', 1, 15, 'Bottles'),
+(2123458, 'Grappa', 8, 13, 'Bottles'),
+(2123459, 'Peach Brandy', 1, 23, 'Bottles'),
+(2123460, 'Courvoisier Cognac', 11, 4, 'Bottles'),
+(2123461, 'Hennessy Cognac VS', 10, 17, 'Bottles'),
+(2123462, 'Everclear', 9, 1, 'Bottles'),
+(2123463, 'Bulldog Gin', 10, 3, 'Bottles'),
+(2123464, 'Dry Gin', 5, 2, 'Bottles'),
+(2123465, 'Sloe Gin', 7, 10, 'Bottles'),
+(2123466, 'Jegermeister', 6, 5, 'Bottles'),
+(2123467, 'Amaretto', 5, 9, 'Bottles'),
+(2123468, 'Benedictine', 5, 5, 'Bottles'),
+(2123469, 'Dekuyper Razzmatazz', 9, 1, 'Bottles'),
+(2123470, 'Cr?me de Cacao', 5, 3, 'Bottles'),
+(2123471, 'Cr?me de Coconut', 2, 16, 'Bottles'),
+(2123472, 'Kahlua', 10, 1, 'Bottles'),
+(2123473, 'Blue Curacao', 2, 18, 'Bottles'),
+(2123474, 'Frangelico', 9, 1, 'Bottles'),
+(2123475, 'Galliano', 7, 4, 'Bottles'),
+(2123476, 'Bailey''s Irish Cream', 2, 2, 'Bottles'),
+(2123477, 'Midori', 6, 9, 'Bottles'),
+(2123478, 'Cr?me de Menthe', 12, 10, 'Bottles'),
+(2123479, 'Triple Sec', 12, 13, 'Bottles'),
+(2123480, 'Tuaca', 10, 3, 'Bottles'),
+(2123481, 'Sambuca', 7, 4, 'Bottles'),
+(2123482, 'Bacardi Gold', 10, 8, 'Bottles'),
+(2123483, 'Stroh Rum', 1, 9, 'Bottles'),
+(2123484, 'Kraken Black Spiced Rum', 6, 16, 'Bottles'),
+(2123485, 'Malibu Rum', 2, 3, 'Bottles'),
+(2123486, 'Bacardi Spiced Rum', 4, 2, 'Bottles'),
+(2123487, 'Sake', 8, 3, 'Bottles'),
+(2123488, 'Apple Pucker', 12, 7, 'Bottles'),
+(2123489, 'Butter Shots', 10, 4, 'Bottles'),
+(2123490, 'Firewater', 1, 1, 'Bottles'),
+(2123491, 'Goldschlager', 4, 24, 'Bottles'),
+(2123492, 'Cherry Pucker', 7, 15, 'Bottles'),
+(2123493, 'Peach Pucker', 1, 1, 'Bottles'),
+(2123494, 'Peppermint Schnapps', 3, 4, 'Bottles'),
+(2123495, 'Rumple Minze', 9, 7, 'Bottles'),
+(2123496, 'Hornitos Reposado Tequila', 6, 18, 'Bottles'),
+(2123497, 'Jose Cuervo Reserva', 11, 6, 'Bottles'),
+(2123498, 'Patron Silver', 11, 1, 'Bottles'),
+(2123499, 'Dry Vermouth', 5, 17, 'Bottles'),
+(2123500, 'Smirnoff Vodka', 2, 3, 'Bottles'),
+(2123501, 'Absolut Vodka', 10, 16, 'Bottles'),
+(2123502, 'Ketel One Vodka', 3, 1, 'Bottles'),
+(2123503, 'Skky Vodka', 12, 5, 'Bottles'),
+(2123504, 'Jacob''s Ghost White Whiskey', 3, 11, 'Bottles'),
+(2123505, 'Rock and Rye', 1, 28, 'Bottles'),
+(2123506, 'Wild Turkey 101 Proof Bourbon', 10, 8, 'Bottles'),
+(2123507, 'Glenlivet', 10, 6, 'Bottles'),
+(2123508, 'Jameson''s Irish Whickey', 8, 10, 'Bottles'),
+(2123509, 'Canadian Mist', 7, 3, 'Bottles'),
+(2123510, 'Johnnie Walker Scotch', 5, 15, 'Bottles'),
+(2123511, 'Dry Sherry', 10, 3, 'Bottles'),
+(2123512, 'Lillet Blanc', 2, 16, 'Bottles'),
+(2123513, 'Madeira', 6, 7, 'Bottles'),
+(2123514, 'Port', 10, 7, 'Bottles'),
+(2123515, 'Cabernet', 2, 9, 'Bottles'),
+(2123516, 'Sangria', 1, 3, 'Bottles'),
+(2123517, 'Cava', 10, 6, 'Bottles'),
+(2123518, 'Dom Perignon', 10, 10, 'Bottles'),
+(2123519, 'Prosecco', 8, 4, 'Bottles'),
+(2123520, 'Cocchi Americano', 3, 19, 'Bottles'),
+(2123521, 'Gewurztraminer', 6, 3, 'Bottles'),
+(2123522, 'Sauterne', 2, 2, 'Bottles'),
+(2123523, 'Bud', 1, 1, '12-Packs'),
+(2123524, 'Bud Light', 11, 21, '12-Packs'),
+(2123525, 'Bud Light Lime', 3, 2, '12-Packs'),
+(2123526, 'Coors', 8, 8, '12-Packs'),
+(2123527, 'Coors Light', 9, 23, '12-Packs'),
+(2123528, 'Miller Lite', 1, 31, '12-Packs'),
+(2123529, 'MGD', 1, 20, '12-Packs'),
+(2123530, 'Michelob Ultra', 10, 10, '12-Packs'),
+(2123531, 'Fat Tire', 5, 2, '12-Packs'),
+(2123532, '1554', 12, 9, '12-Packs'),
+(2123533, 'Sunshine', 8, 6, '12-Packs'),
+(2123534, 'Heineken', 3, 5, '12-Packs'),
+(2123535, 'New Castle', 7, 7, '12-Packs'),
+(2123536, 'Guiness', 5, 15, '12-Packs'),
+(2123537, 'Leinenkugels', 3, 14, '12-Packs'),
+(2123538, 'Red Stripe', 7, 14, '12-Packs'),
+(2123539, 'Alaskan Amber', 10, 2, '12-Packs'),
+(2123540, 'Tecate', 9, 14, '12-Packs'),
+(2123541, 'Dos XXX', 5, 13, '12-Packs'),
+(2123542, 'Negra Modelo', 12, 7, '12-Packs'),
+(2123543, 'Corona', 2, 5, '12-Packs'),
+(2123544, 'Pacifico', 5, 2, '12-Packs'),
+(2123545, 'Pabst Blue Ribbon', 2, 10, '12-Packs'),
+(2123546, 'Chelada', 5, 6, '12-Packs'),
+(2123547, 'Fat Tire', 2, 1, '12-Packs'),
+(2123548, 'Blue Moon', 8, 2, '12-Packs'),
+(2123549, 'New Belgium (Seasonal)', 1, 18, '12-Packs'),
+(2123550, 'Shock Top', 9, 18, '12-Packs'),
+(2123551, 'Keystone', 6, 11, '12-Packs');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `items_non`
+--
+-- Creation: Nov 23, 2015 at 11:10 PM
+--
+
+DROP TABLE IF EXISTS `items_non`;
+CREATE TABLE IF NOT EXISTS `items_non` (
+  `Barcode` int(11) NOT NULL,
+  `Product` varchar(255) NOT NULL,
+  `Price` int(11) NOT NULL,
+  `Stock` int(11) NOT NULL,
+  `Package` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for non-alcoholic beverages/condiments';
+
+--
+-- Truncate table before insert `items_non`
+--
+
+TRUNCATE TABLE `items_non`;
+--
+-- Dumping data for table `items_non`
+--
+
+INSERT INTO `items_non` (`Barcode`, `Product`, `Price`, `Stock`, `Package`) VALUES
+(2123552, 'Coke', 8, 10, 'Bottles'),
+(2123553, 'Dr. Pepper', 6, 1, 'Bottles'),
+(2123554, 'Sprite', 5, 28, 'Bottles'),
+(2123555, 'Root Beer', 6, 2, 'Bottles'),
+(2123556, 'Cranberry Jiuce', 11, 6, 'Bottles'),
+(2123557, 'Orange Juice', 4, 19, 'Bottles'),
+(2123558, 'Pineapple Juice', 11, 8, 'Bottles'),
+(2123559, 'Tomato Juice', 8, 4, 'Bottles'),
+(2123560, 'Clamato Juice', 10, 25, 'Bottles'),
+(2123561, 'Apple Cider', 7, 5, 'Bottles'),
+(2123562, 'Tonic', 5, 8, 'Bottles'),
+(2123563, 'Sparkling Cider', 7, 7, 'Bottles'),
+(2123564, 'Child''s Beer', 2, 9, 'Bottles'),
+(2123565, 'Earl Grey', 9, 4, 'Bags'),
+(2123566, 'Folgers', 11, 8, 'Bags'),
+(2123567, 'Olives', 12, 6, 'Jars'),
+(2123568, 'Pickles', 6, 8, 'Jars'),
+(2123569, 'Peppers', 7, 1, 'Jars'),
+(2123570, 'Celery', 4, 5, 'Stocks'),
+(2123571, 'Onions', 5, 3, 'Jars');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+-- Creation: Nov 23, 2015 at 11:22 PM
+--
+
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `ID` int(11) NOT NULL,
+  `UserName` varchar(255) NOT NULL,
+  `FullName` varchar(255) NOT NULL,
+  `Password` varchar(30) NOT NULL,
+  `is_admin` tinyint(4) NOT NULL,
+  `Active` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Data table to contain user login information. ';
+
+--
+-- Truncate table before insert `users`
+--
+
+TRUNCATE TABLE `users`;
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `UserName`, `FullName`, `Password`, `is_admin`, `Active`) VALUES
+(1, 'mbowker', 'Matthew Bowker', 'mbowker', 1, 1),
+(2, 'ckitners', 'Cinthia Kitners', 'ckitners', 1, 1),
+(3, 'khammel', 'Klinton Hammel', 'khammel', 1, 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `description_alcohol`
+--
+ALTER TABLE `description_alcohol`
+  ADD PRIMARY KEY (`Barcode`);
+
+--
+-- Indexes for table `description_non`
+--
+ALTER TABLE `description_non`
+  ADD PRIMARY KEY (`Barcode`);
+
+--
+-- Indexes for table `items_alcohol`
+--
+ALTER TABLE `items_alcohol`
+  ADD PRIMARY KEY (`Barcode`);
+
+--
+-- Indexes for table `items_non`
+--
+ALTER TABLE `items_non`
+  ADD PRIMARY KEY (`Barcode`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`ID`);
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
