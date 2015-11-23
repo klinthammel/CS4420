@@ -192,7 +192,7 @@ END;
 		$this ->readText("mixers");
 	}
 	
-	function readText($subject = null) {
+	function readText($subject) {
 		
 		@$fh = fopen("info/{$subject}.txt",'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
