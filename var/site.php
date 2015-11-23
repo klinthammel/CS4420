@@ -196,14 +196,14 @@ END;
 		
 		@$fh = fopen("info/{$subject}.txt",'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
-			echo($line);
+			echo(nl2br($line));
 		}
 		fclose($fh);
 		
 		echo <<< END
 
-<br>
-<br>
+<br />
+<br />
 <hr>
 	
 END;
