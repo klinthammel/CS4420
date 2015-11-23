@@ -194,7 +194,7 @@ END;
 	
 	function readText($subject = null) {
 		
-		$fh = fopen("info\\{$subject}.txt",'r');
+		@$fh = fopen("info/{$subject}.txt",'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
 			echo($line);
 		}
