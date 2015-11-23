@@ -1,9 +1,7 @@
 <h2>Liquors</h2>
 
-<pre>
 A distilled beverage, spirit, liquor, or hard liquor is an alcoholic beverage produced by distillation of a mixture produced from alcoholic fermentation. This process purifies it and removes diluting components like water, for the purpose of increasing its proportion of alcohol content (commonly known as alcohol by volume, ABV).[1] As distilled beverages contain more alcohol they are considered "harder" – in North America, the term hard liquor is used to distinguish distilled beverages from undistilled ones, which are implicitly weaker.
 
 As examples, this does not include beverages such as beer, wine, and cider, as they are fermented but not distilled. These all have relatively low alcohol content, typically less than 15%. Brandy is a spirit produced by the distillation of wine, and has an ABV over 35%. Other examples of distilled beverages include vodka, gin, rum, whisky, eau de vie (fruit brandy or schnapps), tequila, baijiu, soju, aguardiente, pálinka, cachaça, singani, borovička and slivovitz.
-</pre>
 
 Source: <a href="https://en.wikipedia.org/wiki/Distilled_beverage" target="_blank">Liquor</a>
