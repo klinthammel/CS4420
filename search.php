@@ -20,6 +20,8 @@ $site = new site("search");
 
 $site -> genOpening();
 
+$site->genSearch();
+
 echo <<< ENDL
 <table class="sortable">
 	<tr>
