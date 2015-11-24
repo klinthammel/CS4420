@@ -32,7 +32,7 @@ Wall to Wall Liquor
         .nj {display:none;}
     </style>
     <div class="noscriptmsg">
-		JavaScript must be enabled!
+		To use the full power of the catalog, please enable javascript in your browser.
     </div>
 
 </noscript>
