@@ -15,6 +15,7 @@ class site {
 <TITLE>{$this->page} - Wall to Wall Liquor</TITLE>
 <link rel="stylesheet" href="css/site.css" />
 <link rel="ICON" href="images/logo.ico" type="image/ico" />
+<script src="sorttable.js"></script>
 </HEAD>
 <BODY>
 
@@ -54,13 +55,13 @@ END;
 		
 		echo <<< END
 		
-<table>
+<table class="sortable">
 	<tr>
-		<td>Product</td>
-		<td>Category</td>
-		<td>Wholesale</td>
-		<td>Quantity</td>
-		<td class="nj">Add to Cart</td>
+		<th>Product</th>
+		<th>Category</th>
+		<th>Wholesale</th>
+		<th>Quantity</th>
+		<th class="nj">Add to Cart</th>
 	</tr>
 END;
 		}
