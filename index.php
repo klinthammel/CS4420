@@ -9,12 +9,6 @@ $site = new site("home");
 
 $site -> genOpening();
 
-$site->genNavbar();
-
-$site->contentBegin();
-
 $site->genHomeContent();
-
-$site->contentEnd();
 
 $site -> genClosing();

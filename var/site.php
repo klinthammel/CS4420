@@ -35,57 +35,21 @@ Wall to Wall Liquor
 </noscript>
 
 END;
-    }
+    $this->genNavbar();
 
-    function contentBegin() {
-		echo <<< END
+        echo <<< END
 
 <h1>{$this->page}</h1>
 
 <div class="content">
 
 END;
-
-		if(($this->page === "catalog") || ($this->page === "beer") || ($this->page === "liquor") || ($this->page === "wine") || ($this->page === "search") || ($this->page === "non_alcoholic")){
-
-
-			if(($this->page === "search") || ($this->page === "catalog")) {
-				$this ->genSearch();
-			}
-		
-		echo <<< END
-		
-<table class="sortable">
-	<tr>
-		<th>Product</th>
-		<th>Category</th>
-		<th>Wholesale</th>
-		<th>Quantity</th>
-		<th class="nj sorttable_nosort">Add to Cart</th>
-	</tr>
-END;
-		}
-		else {
-			$this ->genSearch();
-		}
     }
 
-    function contentEnd()
-    {
-
-
-        if (($this->page === "Catalog") || ($this->page === "Beer") || ($this->page === "Liquor") || ($this->page === "Wine") || ($this->page === "Search") || ($this->page === "Non_Alcoholic")) {
-            echo <<< END
-
-</table>
-END;
-            print "</div>";
-        }
-    }
     function genClosing() {
         $year = date("Y");
         print <<< END
-
+</div>
 <div class="footer">
 <br>
 Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.

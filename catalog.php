@@ -12,14 +12,6 @@ else {
 $db = new PDO("mysql:host={$GLOBALS['mysql_host']};dbname={$GLOBALS['mysql_database']}", $GLOBALS["mysql_user"], $GLOBALS["mysql_password"])
 or die("Unable to connect to database.");
 
-$site = new site(strtolower($type));
-
-$site -> genOpening();
-
-$site->genNavbar();
-
-$site->contentBegin();
-
 if ($type == "non_alcoholic") {$stmt = "SELECT i.`Barcode`, `Product`,`Category`,`Price`,`Stock` FROM `items_non` as i RIGHT JOIN `description_non` as d on d.Barcode = i.Barcode "; }
 else{$stmt = "SELECT i.`Barcode`, `Product`,`Category`,`Price`,`Stock` FROM `items_alcohol` as i RIGHT JOIN `description_alcohol` as d on d.Barcode = i.Barcode"; }
 
@@ -27,10 +19,27 @@ $sth = $db->query($stmt) or die("Unable to query");
 
 $result = $sth->fetchAll();
 
+$site = new site(strtolower($type));
+
+$site -> genOpening();
+
+$site->genSearch();
+
+echo <<< ENDL
+<table class="sortable">
+	<tr>
+		<th>Product</th>
+		<th>Category</th>
+		<th>Wholesale</th>
+		<th>Quantity</th>
+		<th class="nj sorttable_nosort">Add to Cart</th>
+	</tr>
+ENDL;
+
 foreach($result as $row) {
     echo "<tr><td>{$row["Product"]}<br />(Barcode: {$row["Barcode"]})</td><td>{$row["Category"]}</td><td>\${$row["Price"]}.00</td><td>{$row["Stock"]}</td><td></td></tr>\r\n";
 }
 
-$site->contentEnd();
+echo "</table>";
 
 $site -> genClosing();
