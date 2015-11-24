@@ -69,7 +69,7 @@ END;
         print <<< END
 
 <ul class="navbar">
-    <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" height="48px" id="logo"/></li>
+    <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" style="height:48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="catalog.php?category=Catalog">Catalog</a></li>
 	<li><a href="catalog.php?category=Beer">Beers</a></li>
@@ -89,37 +89,37 @@ END;
 		echo <<< END
 <div class="search">
 <br>
+<form action="search.php" method="get">
 <table id="search">
 	<tr>
-		<td id="searchData">
-			<form action="search.php" method="get">
-			Product:
+		<td id="searchData_box">
+			Search:
 				<input type="text" name="product"><br>
 		</td>
-		<td id="searchData">
+		<td id="searchData_text">
 			Category:
 		</td>
-		<td id="searchData">
+		<td id="searchData_catalog">
 			<input type="radio" name="Category" value="Catalog" checked="checked">All
 		</td>
-		<td id="searchData">
+		<td id="searchData_beer">
 			<input type="radio" name="Category" value="Beer">Beer
 		</td>
-		<td id="searchData">
+		<td id="searchData_liquor">
 			<input type="radio" name="Category" value="Liquor">Liquor 
 		</td>
-		<td id="searchData">
+		<td id="searchData_wine">
 			<input type="radio" name="Category" value="Wine">Wine  
 		</td>
-		<td id="searchData">
+		<td id="searchData_na">
 			<input type="radio" name="Category" value="Non_Alcoholic">Non-Alcoholic  
 		</td>
-		<td id="searchData">
+		<td id="searchData_submit">
 			<input type="submit" value="Search">
-			</form>
 		</td>
 	</tr>
 </table>
+</form>
 <br>
 <br>
 </div>

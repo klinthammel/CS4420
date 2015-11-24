@@ -9,6 +9,8 @@ $site = new site("home");
 
 $site -> genOpening();
 
+$site->genSearch();
+
 $site->genHomeContent();
 
 $site -> genClosing();
