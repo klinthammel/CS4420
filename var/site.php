@@ -61,7 +61,7 @@ END;
 		<th>Category</th>
 		<th>Wholesale</th>
 		<th>Quantity</th>
-		<th class="nj">Add to Cart</th>
+		<th class="nj sorttable_nosort">Add to Cart</th>
 	</tr>
 END;
 		}

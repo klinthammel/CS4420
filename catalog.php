@@ -28,7 +28,7 @@ $sth = $db->query($stmt) or die("Unable to query");
 $result = $sth->fetchAll();
 
 foreach($result as $row) {
-    echo "<tr><td>{$row["Barcode"]} - {$row["Product"]}</td><td>{$row["Category"]}</td><td>\${$row["Price"]}.00</td><td>{$row["Stock"]}</td><td></td></tr>";
+    echo "<tr><td>{$row["Product"]}<br />(Barcode: {$row["Barcode"]})</td><td>{$row["Category"]}</td><td>\${$row["Price"]}.00</td><td>{$row["Stock"]}</td><td></td></tr>\r\n";
 }
 
 $site->contentEnd();
