@@ -1,12 +1,18 @@
 <?php
 
 class site {
-    function genOpening($title = NULL) {
+    private $page;
+
+    function __construct($page = NULL) {
+        $this->page = $page;
+    }
+
+    function genOpening() {
         echo <<< END
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<TITLE>{$title} - Wall to Wall Liquor</TITLE>
+<TITLE>{$this->page} - Wall to Wall Liquor</TITLE>
 <link rel="stylesheet" href="css/site.css" />
 <link rel="ICON" href="images/logo.ico" type="image/ico" />
 </HEAD>
@@ -30,19 +36,19 @@ Wall to Wall Liquor
 END;
     }
 
-    function contentBegin($page = NULL) {	
+    function contentBegin() {
 		echo <<< END
 
-<h1>{$page}</h1>
+<h1>{$this->page}</h1>
 
 <div class="content">
 
 END;
 
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non_Alcoholic")){
+		if(($this->page === "catalog") || ($this->page === "beer") || ($this->page === "liquor") || ($this->page === "wine") || ($this->page === "search") || ($this->page === "non_alcoholic")){
 
 
-			if(($page === "Search") || ($page === "Catalog")) {
+			if(($this->page === "search") || ($this->page === "catalog")) {
 				$this ->genSearch();
 			}
 		
@@ -61,41 +67,20 @@ END;
 		else {
 			$this ->genSearch();
 		}
-		
-		switch ($page) {
-			case "Home":
-				$this ->genHomeContent();
-				break;
-			case "Catalog":
-				//for loop filling in table from db			
-				break;
-			case "Beer":
-				//for loop filling in table from db			
-				break;
-			case "Liquor":
-				//for loop filling in table from db			
-				break;
-			case "Wine":
-				//for loop filling in table from db
-				break;
-			case "Non_Alcoholic":
-				//for loop filling in table from db
-				break;
-			default:
-		}
-		
-		if(($page === "Catalog") || ($page === "Beer") || ($page === "Liquor") || ($page === "Wine") || ($page === "Search") || ($page === "Non_Alcoholic")){
-			echo <<< END
-			
+    }
+
+    function contentEnd()
+    {
+
+
+        if (($this->page === "Catalog") || ($this->page === "Beer") || ($this->page === "Liquor") || ($this->page === "Wine") || ($this->page === "Search") || ($this->page === "Non_Alcoholic")) {
+            echo <<< END
+
 </table>
 END;
-		}	
+            print "</div>";
+        }
     }
-
-    function contentEnd() {
-        print "</div>";
-    }
-
     function genClosing() {
         $year = date("Y");
         print <<< END
