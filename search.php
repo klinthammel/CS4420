@@ -3,7 +3,7 @@ session_start();
 require("includes.php");
 
 ISSET($_GET["q"]) ? $q = $_GET["q"] : $q = NULL;
-ISSET($_GET["catalog"]) ? $type = strtolower($_GET["catalog"]) : $type = NULL;
+ISSET($_GET["category"]) ? $type = strtolower($_GET["category"]) : $type = NULL;
 
 $db = new PDO("mysql:host={$GLOBALS['mysql_host']};dbname={$GLOBALS['mysql_database']}", $GLOBALS["mysql_user"], $GLOBALS["mysql_password"])
 or die("Unable to connect to database.");
