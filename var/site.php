@@ -8,11 +8,14 @@ class site {
     }
 
     function genOpening() {
+        $pageTitle = str_replace("_", " ", $this->page);
+
+        $pageTitle = ucwords($pageTitle);
         echo <<< END
 <!DOCTYPE HTML>
 <HTML>
 <HEAD>
-<TITLE>{$this->page} - Wall to Wall Liquor</TITLE>
+<TITLE>{$pageTitle} - Wall to Wall Liquor</TITLE>
 <link rel="stylesheet" href="css/site.css" />
 <link rel="ICON" href="images/logo.ico" type="image/ico" />
 <script src="sorttable.js"></script>
@@ -36,14 +39,13 @@ Wall to Wall Liquor
 
 END;
     $this->genNavbar();
+        $pageTitle = str_replace("_", " ", $this->page);
 
-        echo <<< END
+        $pageTitle = ucwords($pageTitle);
 
-<h1>{$this->page}</h1>
+        echo "<h1>{$pageTitle}</h1>";
 
-<div class="content">
-
-END;
+        echo "<div class=\"content\">";
     }
 
     function genClosing() {
@@ -94,25 +96,25 @@ END;
 	<tr>
 		<td id="searchData_box">
 			Search:
-				<input type="text" name="product"><br>
+				<input type="text" name="q"><br>
 		</td>
 		<td id="searchData_text">
 			Category:
 		</td>
 		<td id="searchData_catalog">
-			<input type="radio" name="Category" value="Catalog" checked="checked">All
+			<input type="radio" name="category" value="catalog" checked="checked">All
 		</td>
 		<td id="searchData_beer">
-			<input type="radio" name="Category" value="Beer">Beer
+			<input type="radio" name="category" value="beer">Beer
 		</td>
 		<td id="searchData_liquor">
-			<input type="radio" name="Category" value="Liquor">Liquor 
+			<input type="radio" name="category" value="liquor">Liquor
 		</td>
 		<td id="searchData_wine">
-			<input type="radio" name="Category" value="Wine">Wine  
+			<input type="radio" name="category" value="wine">Wine
 		</td>
 		<td id="searchData_na">
-			<input type="radio" name="Category" value="Non_Alcoholic">Non-Alcoholic  
+			<input type="radio" name="category" value="non_alcoholic">Non-Alcoholic
 		</td>
 		<td id="searchData_submit">
 			<input type="submit" value="Search">
