@@ -18,6 +18,7 @@ class site {
 <TITLE>{$pageTitle} - Wall to Wall Liquor</TITLE>
 <link rel="stylesheet" href="css/site.css" />
 <link rel="ICON" href="images/logo.ico" type="image/ico" />
+<script src="cart.js"></script>
 <script src="sorttable.js"></script>
 </HEAD>
 <BODY>
