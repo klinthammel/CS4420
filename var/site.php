@@ -127,7 +127,7 @@ END;
     <li><a href="catalog.php?category=Wine">Wines</a></li>
 	<li><a href="catalog.php?category=Non_Alcoholic">Non-Alcoholic</a></li>
     <li class="right"><a href="Cart.php">Cart</a></li>
-	<li class="right"><a href="catalog.php?category=Search">Search</a></li>
+	<li class="right"><a href="search.php">Search</a></li>
     {$user}
 </ul>
 
