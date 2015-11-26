@@ -180,7 +180,7 @@ DROP TABLE IF EXISTS `description_non`;
 CREATE TABLE IF NOT EXISTS `description_non` (
   `barcode` int(11) NOT NULL,
   `category` varchar(255) NOT NULL,
-  `cub_category` varchar(255) NOT NULL,
+  `sub_category` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `rating` int(11) NOT NULL,
   `rate_count` int(11) NOT NULL
@@ -195,7 +195,7 @@ TRUNCATE TABLE `description_non`;
 -- Dumping data for table `description_non`
 --
 
-INSERT INTO `description_non` (`barcode`, `category`, `cub_category`, `type`, `rating`, `rate_count`) VALUES
+INSERT INTO `description_non` (`barcode`, `category`, `sub_category`, `type`, `rating`, `rate_count`) VALUES
 (2123552, 'Soda', 'N/A', 'non_alcoholic', 0, 0),
 (2123553, 'Soda', 'N/A', 'non_alcoholic', 0, 0),
 (2123554, 'Soda', 'N/A', 'non_alcoholic', 0, 0),
@@ -374,7 +374,7 @@ INSERT INTO `items_non` (`barcode`, `product`, `price`, `stock`, `package`) VALU
 (2123553, 'Dr. Pepper', 6, 1, 'Bottles'),
 (2123554, 'Sprite', 5, 28, 'Bottles'),
 (2123555, 'Root Beer', 6, 2, 'Bottles'),
-(2123556, 'Cranberry Jiuce', 11, 6, 'Bottles'),
+(2123556, 'Cranberry Juice', 11, 6, 'Bottles'),
 (2123557, 'Orange Juice', 4, 19, 'Bottles'),
 (2123558, 'Pineapple Juice', 11, 8, 'Bottles'),
 (2123559, 'Tomato Juice', 8, 4, 'Bottles'),

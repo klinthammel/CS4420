@@ -22,7 +22,7 @@ switch($type) {
 		break;
 	
 	case "non_alcoholic":
-		$stmt = "SELECT i.`Barcode`, `Product`,`Category`,`Price`,`Stock` FROM `items_non` as i RIGHT JOIN `description_non` as d on d.Barcode = i.Barcode ";
+		$stmt = "SELECT i.`Barcode`, `Product`,`Category`,`Price`,`Stock` FROM `items_non` as i RIGHT JOIN `description_non` as d on d.Barcode = i.Barcode WHERE d.type='non_alcoholic'";
 		break;
 	
 	case "wine":
