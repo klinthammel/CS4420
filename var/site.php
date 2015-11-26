@@ -75,10 +75,10 @@ END;
     <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" style="height:48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
 	<li><a href="catalog.php?category=Catalog">Catalog</a></li>
-	<li><a href="catalog.php?category=Beer">Beers</a></li>
-	<li><a href="catalog.php?category=Liquor">Liquors</a></li>
-    <li><a href="catalog.php?category=Wine">Wines</a></li>
-	<li><a href="catalog.php?category=Non_Alcoholic">Non-Alcoholic</a></li>
+	<li><a href="catalog.php?category=beer">Beers</a></li>
+	<li><a href="catalog.php?category=liquor">Liquors</a></li>
+    <li><a href="catalog.php?category=wine">Wines</a></li>
+	<li><a href="catalog.php?category=non_alcoholic">Non-Alcoholic</a></li>
     <li class="right"><a href="Cart.php">Cart</a></li>
 	<li class="right"><a href="search.php">Search</a></li>
     {$user}
