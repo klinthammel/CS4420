@@ -137,19 +137,14 @@ END;
 
 END;
 		$this ->readText("welcome");
-		$this ->readText("catalog");
-		$this ->readText("beer");
-		$this ->readText("liquor");
-		$this ->readText("wine");	
-		$this ->readText("non_alcoholic");	
-		$this ->readText("mixers");
+
 	}
 	
 	function readText($subject) {
 		
 		@$fh = fopen("info/{$subject}.txt",'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
-			echo(nl2br($line));
+			echo($line);
 		}
 		fclose($fh);
 		
