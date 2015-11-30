@@ -6,7 +6,7 @@ if (ISSET($_GET["category"])) {
     $type = strtolower($_GET["category"]);
 }
 else {
-    $type = "all";
+    $type = "catalog";
 }
 
 $db = new PDO("mysql:host={$GLOBALS['mysql_host']};dbname={$GLOBALS['mysql_database']}", $GLOBALS["mysql_user"], $GLOBALS["mysql_password"])
@@ -33,6 +33,8 @@ $site = new site(strtolower($type));
 $site -> genOpening();
 
 $site->genSearch();
+
+$site->readText($type);
 
 echo <<< ENDL
 <table class="sortable">

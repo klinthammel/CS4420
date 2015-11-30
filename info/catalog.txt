@@ -1,4 +1,1 @@
-<h2>Catalog</h2>
-
-Catalog 
 We have beer, wines, and liquors.  You may order on-line, or at the checkout.

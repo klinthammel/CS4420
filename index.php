@@ -11,6 +11,6 @@ $site -> genOpening();
 
 $site -> genSearch();
 
-$site -> genHomeContent();
+$site ->readText("welcome");
 
 $site -> genClosing();

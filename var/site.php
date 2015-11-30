@@ -130,21 +130,15 @@ END;
 END;
 	}
 	
-	function genHomeContent(){
-		echo <<< END
-		
-<hr>
-
-END;
-		$this ->readText("welcome");
-
-	}
-	
 	function readText($subject) {
+
+        $file = "info/{$subject}.txt";
+
+        if (!file_exists($file)) {return;}
 		
-		@$fh = fopen("info/{$subject}.txt",'r') or die("Unable to open file: {$subject}.txt");
+		@$fh = fopen($file,'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
-			echo($line);
+			echo(nl2br($line));
 		}
 		fclose($fh);
 		
