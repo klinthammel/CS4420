@@ -74,7 +74,7 @@ END;
 <ul class="navbar">
     <li><img src="images/logo.png" alt="Wall to Wall Liquor logo" style="height:48px" id="logo"/></li>
 	<li><a href="index.php">Home</a></li>
-	<li><a href="catalog.php?category=Catalog">Catalog</a></li>
+	<li><a href="catalog.php">Catalog</a></li>
 	<li><a href="catalog.php?category=beer">Beers</a></li>
 	<li><a href="catalog.php?category=liquor">Liquors</a></li>
     <li><a href="catalog.php?category=wine">Wines</a></li>
