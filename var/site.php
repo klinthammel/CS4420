@@ -138,7 +138,7 @@ END;
 		
 		@$fh = fopen($file,'r') or die("Unable to open file: {$subject}.txt");
 		while ($line = fgets($fh)) {
-			echo(nl2br($line));
+			echo(nl2br(preg_replace("/\n+/", "\n", $line)));
 		}
 		fclose($fh);
 		

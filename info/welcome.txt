@@ -5,46 +5,32 @@ We hope you enjoy your visit.
 
 <hr>
 
-<h3>Popular Beers</h3>
-<div>
-<table class="features">
-<tr>
+<h3>Popular Beers</h3><div><table class="features"><tr>
 <td class="features"><img src="images/corona.jpg" alt="Corona" class="photo"/></td>
 <td class="features"><img src="images/bud.jpg" alt="Bud" class="photo"/></td>
-<td class="features"><img src="images/bud_light.jpg" alt="Bud Light" class="photo"/></td>
-</tr>
-<tr>Files
+<td class="features"><img src="images/bud_light.jpg" alt="Bud Light" class="photo"/></td></tr><tr>
 <td class="features"><img src="images/chelada.jpg" alt="Chelada" class="photo"/></td>
 <td class="features"><img src="images/fattire.jpg" alt="Fat Tire" class="photo"/></td>
-<td class="features"><img src="images/pacifico.jpg" alt="Pacifico" class="photo"/></td>
-</tr>
-</table>
+<td class="features"><img src="images/pacifico.jpg" alt="Pacifico" class="photo"/></td></tr></table>
+
 <hr>
-<h3>Essential Liquors</h3>
-<table class="features">
-<tr>
+
+<h3>Essential Liquors</h3><table class="features"><tr>
 <td class="features"><img src="images/absinthe.jpg" alt="Absinthe" class="photo"/></td>
 <td class="features"><img src="images/baileys.jpg" alt="jim_beam_ghost" class="photo"/></td>
 <td class="features"><img src="images/everclear.jpg" alt="Bud Light" class="photo"/></td>
-</tr>
-<tr>
+</tr><tr>
 <td class="features"><img src="images/dry_gin.jpg" alt="Chelada" class="photo"/></td>
 <td class="features"><img src="images/jager.jpg" alt="Fat Tire" class="photo"/></td>
-<td class="features"><img src="images/stroh.jpg" alt="Pacifico" class="photo"/></td>
-</tr>
-</table>
+<td class="features"><img src="images/stroh.jpg" alt="Pacifico" class="photo"/></td></tr></table>
+
 <hr>
-<h3>Fun Wines</h3>
-<table class="features">
-<tr>
+
+<h3>Fun Wines</h3><table class="features"><tr>
 <td class="features"><img src="images/sangria.jpg" alt="Sangria" class="photo"/></td>
 <td class="features"><img src="images/sauterne.jpg" alt="Sauterne" class="photo"/></td>
-<td class="features"><img src="images/gewurztraminer.jpg" alt="Gewurztraminer" class="photo"/></td>
-</tr>
-<tr>
+<td class="features"><img src="images/gewurztraminer.jpg" alt="Gewurztraminer" class="photo"/></td></tr><tr>
 <td class="features"><img src="images/cava.jpg" alt="Cava" class="photo"/></td>
 <td class="features"><img src="images/cocchi_americano.jpg" alt="Cocchi Americano" class="photo"/></td>
-<td class="features"><img src="images/prosecco.jpg" alt="Prosecco" class="photo"/></td>
-</tr>
-</table>
+<td class="features"><img src="images/prosecco.jpg" alt="Prosecco" class="photo"/></td></tr></table>
 </div>
