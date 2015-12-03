@@ -63,12 +63,6 @@ END;
     }
 
     function genNavbar() {
-        if (isset($_SESSION["is_logged_in"]) && $_SESSION["is_logged_in"]) {
-            $user = "<li>Howdy, {$_SESSION["username"]}</li><li><a href='user.php?action=logout'>Logout</a></li>";
-        }
-        else {
-            $user = "<li class=\"right\"><a href=\"user.php\">Login</a></li>";
-        }
         print <<< END
 
 <ul class="navbar">
@@ -81,7 +75,6 @@ END;
 	<li><a href="catalog.php?category=non_alcoholic">Non-Alcoholic</a></li>
     <li class="right"><a href="Cart.php">Cart</a></li>
 	<li class="right"><a href="search.php">Search</a></li>
-    {$user}
 </ul>
 
 END;
