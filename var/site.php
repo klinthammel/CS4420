@@ -7,6 +7,7 @@ class site {
         $this->page = $page;
     }
 
+	//function that generates the begining of the page, give title to page.
     function genOpening() {
         $pageTitle = str_replace("_", " ", $this->page);
 
@@ -19,6 +20,7 @@ class site {
 <link rel="stylesheet" href="css/site.css" />
 <link rel="ICON" href="images/logo.ico" type="image/ico" />
 <script src="cart.js"></script>
+<!-- Script to sort table by clicking on table headers, pulled from outside source. -->
 <script src="sorttable.js"></script>
 </HEAD>
 <BODY>
@@ -26,6 +28,8 @@ class site {
 <div class="header">
 Wall to Wall Liquor
 </div>
+
+<!-- Add the no javascript container, if javascript is disbaled, flag user. -->
 
 <noscript>
 
@@ -39,16 +43,23 @@ Wall to Wall Liquor
 </noscript>
 
 END;
+	//call genNavbar to add html code it producs here.
     $this->genNavbar();
+	
+		//remove underscores if passed in page descriptor has it
         $pageTitle = str_replace("_", " ", $this->page);
 
+		//capitolize the first letter in the page descriptor
         $pageTitle = ucwords($pageTitle);
 
+		//add the page descriptor to the top of the page.
         echo "<h1>{$pageTitle}</h1>";
 
+		//create teh begining of the content div container.
         echo "<div class=\"content\">";
     }
 
+	//generate the closing html code and add in copyright year.
     function genClosing() {
         $year = date("Y");
         print <<< END
@@ -62,6 +73,7 @@ Copyright &copy;{$year} Wall to Wall Liquor.  Please drink responsibly.
 END;
     }
 
+	//generate the navigation bar contents of the page.
     function genNavbar() {
         print <<< END
 
@@ -80,7 +92,7 @@ END;
 END;
 	}
     
-	
+	//generate the search bar contents of the page, wiil allows user to search for products.
 	function genSearch(){
 		echo <<< END
 <div class="search">
@@ -123,6 +135,7 @@ END;
 END;
 	}
 	
+	//read in text files that are stored in the info subfolder.
 	function readText($subject) {
 
         $file = "info/{$subject}.txt";
