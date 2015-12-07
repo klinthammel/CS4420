@@ -51,11 +51,12 @@ foreach($result as $row) {
     echo "<tr><td>{$row["Product"]}<br />(Barcode: {$row["Barcode"]})</td><td>{$row["Category"]}</td><td>\${$row["Price"]}.00</td><td>{$row["Stock"]}</td><td>";
     if ($row["Stock"] < 1) { echo "This product is currently unavailable"; }
     else {
-        echo "<select id='quantity_{$row["Product"]}'>";
+        $addToId = strtolower(preg_replace('/[^a-z0-9]+/i', '_', $row["Product"]));
+        echo "<select id='quantity_{$addToId}'>";
         for($i = 1; $i <= $row["Stock"]; $i++) {
             echo "<option value='$i'>$i</option>";
         }
-        echo "</select><button onclick='addToCart(\"{$row["Product"]}\")'>+ Add</button>";
+        echo "</select><button onclick='action(\"add\",\"{$row["Product"]}\")'>+ Add</button>";
     }
     echo "</td></tr>\r\n";
 }
