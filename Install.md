@@ -1,6 +1,15 @@
 Installation of this tool
 =========================
 
+Assumptions
+-----------
+We are assuming you have the following:
+- Web server running a recent stable version of PHP (PHP 7 has not been tested at this time)
+- Database server where you can create a database
+- The two servers above can talk.
+
+Steps
+-----
 1. Download the lastest stable version from [https://github.com/klinthammel/CS4420/releases](https://github.com/klinthammel/CS4420/releases).
 2. Unzip the source code archive.
 3. Create a database to store the data.
