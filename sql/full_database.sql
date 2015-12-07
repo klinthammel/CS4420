@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.14
+-- version 4.5.0.2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 26, 2015 at 09:26 PM
--- Server version: 5.6.26
--- PHP Version: 5.6.12
+-- Host: localhost
+-- Generation Time: Dec 07, 2015 at 11:05 PM
+-- Server version: 10.0.17-MariaDB
+-- PHP Version: 5.6.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,30 +17,9 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cs4420`
+-- Database: `CS4420`
 --
 
--- --------------------------------------------------------
-
---
--- Table structure for table `cart`
---
-
-DROP TABLE IF EXISTS `cart`;
-CREATE TABLE IF NOT EXISTS `cart` (
-  `id` int(11) NOT NULL,
-  `barcode` int(11) NOT NULL,
-  `product` varchar(255) NOT NULL,
-  `price` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL,
-  `total_cost` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Cart datatable';
-
---
--- Truncate table before insert `cart`
---
-
-TRUNCATE TABLE `cart`;
 -- --------------------------------------------------------
 
 --
@@ -54,7 +33,8 @@ CREATE TABLE IF NOT EXISTS `description_alcohol` (
   `sub_category` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `rating` int(11) NOT NULL,
-  `rate_count` int(11) NOT NULL
+  `rate_count` int(11) NOT NULL,
+  PRIMARY KEY (`barcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='This table will hold the description of the alcoholic drinks on the list.';
 
 --
@@ -183,7 +163,8 @@ CREATE TABLE IF NOT EXISTS `description_non` (
   `sub_category` varchar(255) NOT NULL,
   `type` varchar(255) NOT NULL,
   `rating` int(11) NOT NULL,
-  `rate_count` int(11) NOT NULL
+  `rate_count` int(11) NOT NULL,
+  PRIMARY KEY (`barcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Description of non_alcoholic beverages/condiments.';
 
 --
@@ -229,7 +210,8 @@ CREATE TABLE IF NOT EXISTS `items_alcohol` (
   `product` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
-  `package` varchar(255) NOT NULL
+  `package` varchar(255) NOT NULL,
+  PRIMARY KEY (`barcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Contains the names, stock, and price details of items.';
 
 --
@@ -357,7 +339,8 @@ CREATE TABLE IF NOT EXISTS `items_non` (
   `product` varchar(255) NOT NULL,
   `price` int(11) NOT NULL,
   `stock` int(11) NOT NULL,
-  `package` varchar(255) NOT NULL
+  `package` varchar(255) NOT NULL,
+  PRIMARY KEY (`barcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for non-alcoholic beverages/condiments';
 
 --
@@ -394,73 +377,29 @@ INSERT INTO `items_non` (`barcode`, `product`, `price`, `stock`, `package`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `orders`
 --
 
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL,
-  `user_name` varchar(255) NOT NULL,
-  `full_name` varchar(255) NOT NULL,
-  `password` varchar(30) NOT NULL,
-  `is_admin` tinyint(4) NOT NULL,
-  `active` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Data table to contain user login information. ';
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `order_id` int(11) NOT NULL AUTO_INCREMENT,
+  `fName` varchar(255) NOT NULL,
+  `lName` varchar(255) NOT NULL,
+  `addr` varchar(1024) NOT NULL,
+  `ccNum` int(16) NOT NULL,
+  `expr` varchar(7) NOT NULL,
+  `ccCCV` varchar(4) NOT NULL,
+  `ord` longtext NOT NULL,
+  `sID` varchar(255) NOT NULL,
+  `date` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Table for storing all of our awesome orders!';
 
 --
--- Truncate table before insert `users`
+-- Truncate table before insert `orders`
 --
 
-TRUNCATE TABLE `users`;
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `user_name`, `full_name`, `password`, `is_admin`, `active`) VALUES
-(1, 'mbowker', 'Matthew Bowker', 'mbowker', 1, 1),
-(2, 'ckitners', 'Cinthia Kitners', 'ckitners', 1, 1),
-(3, 'khammel', 'Klinton Hammel', 'khammel', 1, 1);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `description_alcohol`
---
-ALTER TABLE `description_alcohol`
-  ADD PRIMARY KEY (`barcode`);
-
---
--- Indexes for table `description_non`
---
-ALTER TABLE `description_non`
-  ADD PRIMARY KEY (`barcode`);
-
---
--- Indexes for table `items_alcohol`
---
-ALTER TABLE `items_alcohol`
-  ADD PRIMARY KEY (`barcode`);
-
---
--- Indexes for table `items_non`
---
-ALTER TABLE `items_non`
-  ADD PRIMARY KEY (`barcode`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
+TRUNCATE TABLE `orders`;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

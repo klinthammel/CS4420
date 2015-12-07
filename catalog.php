@@ -89,15 +89,14 @@ foreach($result as $row) {
     if ($row["Stock"] < 1) { echo "This product is currently unavailable"; }
     else {
         // Otherwise, generate the text of the ID, each dropdown needs its own ID for the javascript
-        $addToId = strtolower(preg_replace('/[^a-z0-9]+/i', '_', $row["Product"]));
         // Generate the select element, with the ID generated above
-        echo "<select id='quantity_{$addToId}'>";
+        echo "<select id='quantity_{$row["Barcode"]}'>";
         for($i = 1; $i <= $row["Stock"]; $i++) {
             // Loop through, generating the options for the dropdown.
             echo "<option value='$i'>$i</option>";
         }
         // Generate the button.
-        echo "</select><button onclick='action(\"add\",\"{$row["Product"]}\")'>+ Add</button>";
+        echo "</select><button onclick='action(\"add\",\"{$row["Barcode"]}\")'>+ Add</button>";
     }
     // Close out the row
     echo "</td></tr>\r\n";
