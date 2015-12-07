@@ -1,6 +1,6 @@
 <?php
 
-$GLOBALS["version"] = "01devel1";
+$GLOBALS["version"] = "0.1";
 
 $GLOBALS["mysql_host"] = "";
 
